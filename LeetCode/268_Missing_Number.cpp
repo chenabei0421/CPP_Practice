@@ -21,7 +21,6 @@ public:
         //}
         //return sum-sum2;
         
-        
         //Sol3:
         int sum = 0, i;
         for(i = 0; i < nums.size(); i++) {
