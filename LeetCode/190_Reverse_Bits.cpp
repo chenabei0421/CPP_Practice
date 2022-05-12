@@ -12,7 +12,6 @@ public:
             result = result | last_bit;
             //cout << i << last_bit << endl;
         }
-        
         return result;
     }
 };
