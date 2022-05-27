@@ -1,0 +1,50 @@
+#include <iostream>
+
+void Swap(int *x, int *y){
+    *x ^= *y;
+    *y ^= *x;
+    *x ^= *y;
+}
+
+//Sort ASC
+void SelectSort(int array[], int size)
+{
+    for(int i=0; i<size; ++i){
+        for(int j=i+1; j<size; j++){
+            if(array[i] > array[j])
+                Swap(&array[i], &array[j]);
+        }
+    }
+}
+
+int BinarySearch(int array[], int index_begin, int index_end, int key){
+    if(index_begin>index_end)
+        return -1;
+    
+    int index_middle = (index_end+index_begin)/2;
+    if(key==array[index_middle]) //operator are int then n/2 is int
+        return index_middle;
+    else if(key<array[index_middle]){
+        return BinarySearch(array, index_begin, index_middle-1, key);
+    }
+    else {  //<
+        return BinarySearch(array, index_middle+1, index_end, key);
+    }
+}
+
+int main()
+{
+    int a[6]={5, 9, 2, 0, 1268, 21};
+    int key=5;
+    
+    //1. Sort
+    SelectSort(a, 6);
+    for(int i=0; i<6; ++i)
+        std::cout<<a[i]<<",";
+    std::cout<<std::endl;
+    
+    int index_key=BinarySearch(a, 0, 5, key);
+    std::cout<<index_key<<std::endl;
+    
+    return 0;
+}

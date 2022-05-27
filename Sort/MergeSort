@@ -1,0 +1,5 @@
+void MergeSort(int inputNums[])
+{
+    //兩兩合併
+    return;
+}

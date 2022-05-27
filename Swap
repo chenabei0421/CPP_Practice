@@ -1,0 +1,16 @@
+//call by reference
+void swap(int *a, int *b)
+{
+  int temp;
+  temp = *a;
+  *a = *b;
+  *b = temp;                                                                                             
+}
+
+//xor, 少一個temp var
+void Swap(int *a, int *b)
+{
+    *a ^= *b;
+    *b ^= *a;
+    *a ^= *b;
+}

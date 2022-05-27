@@ -1,0 +1,5 @@
+void InsertionSort(int inputNums[])
+{
+    //插到對的位置
+    return;
+}
