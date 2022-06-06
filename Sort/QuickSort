@@ -1,5 +1,15 @@
-void QuickSort(int inputNums[])
-{
-
-    return;
+void quickSort(int* nums, int head, int tail){
+    if(head>=tail){return;}
+    int comp=nums[head];
+    int i=head,j=tail;
+    while(i<j){
+        while(nums[j]>=comp && i<j){j--;}
+        nums[i]=nums[j];
+        nums[j]=comp;
+        while(nums[i]<=comp && i<j){i++;}
+        nums[j]=nums[i];
+        nums[i]=comp;
+    }
+    quickSort(nums,head,i-1);
+    quickSort(nums,j+1,tail);
 }

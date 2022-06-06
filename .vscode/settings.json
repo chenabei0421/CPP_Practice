@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "swap": "cpp",
-        "binarysearch": "cpp"
+        "binarysearch": "cpp",
+        "quicksort": "cpp"
     }
 }

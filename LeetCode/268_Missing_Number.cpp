@@ -22,6 +22,8 @@ public:
         //return sum-sum2;
         
         //Sol3:
+        //Runtime: 32 ms, faster than 36.86% of C++ online submissions for Missing Number.
+        //Memory Usage: 17.8 MB, less than 93.56% of C++ online submissions for Missing Number.
         int sum = 0, i;
         for(i = 0; i < nums.size(); i++) {
             sum = sum - nums[i] + i;
