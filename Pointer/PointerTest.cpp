@@ -6,12 +6,11 @@ void main()
     printf("%c",*p++);      //index=1, print 0  *先取值再下一
     printf("%c",*(p++));    //2, 1  * *(p++)等同*p++
     printf("%c",(*p)++);    //2, print 1 => s[2]=2
-    printf("%c",*++p);      //1, 1
-    printf("%c",*(++p));    //0, 0
-    printf("%c",++*p);      //
-    printf("%c",++(*p));
+    printf("%c",*++p);      //3, 3  *先下一再取值 等同s[++i] 
+    printf("%c",*(++p));    //4, 2  *等同*++p 
+    printf("%c",++*p);      //4, s[4]=3 => print 3
+    printf("%c",++(*p));    //4, s[4]=4 => print 4
     printf("\n%s",s);
-
     //ans
     char s[]="0113256";
     char *p=s;
@@ -50,7 +49,6 @@ void main()
     printf("%d\n", *(a+7));
 
     //ans
-    int main(){
     int a[] ={1,2,3,4,5,6,7,9};
     int *ptr = (int*) (&a+1);
     printf("%d\n", &a);         //26410768
